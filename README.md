@@ -16,14 +16,14 @@ A Linux Server Hardening project for a fictional organization, The Baker Street 
   
 - [Auditing and securing SSH](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Auditing%20and%20securing%20SSH)
   
-- [Reviewing and updating system packages](
+- [Reviewing and updating system packages](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Reviewing%20and%20updating%20system%20packages)
   
-- [Disabling unnecessary services](
+- [Disabling unnecessary services](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Disabling%20unnecessary%20services)
   
-- [Enabling and configuring logging](
+- [Enabling and configuring logging](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Enabling%20and%20configuring%20logging)
   
-- [Scripting your hardening tasks](
+- [Scripting your hardening tasks](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Scripting%20your%20hardening%20tasks)
   
-- [Scheduling your hardening scripts](
+- [Scheduling your hardening scripts](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Scheduling%20your%20hardening%20scripts)
   
-- [Report Summary](
+- [Summary Report](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Summary%20Report)
