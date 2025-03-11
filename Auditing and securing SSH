@@ -8,6 +8,7 @@ SSH is a common method attackers use to breach remote linux servers, it is impor
   3. Edit the SSH Server Config File
   4. Restart the SSH service to set your updates
 
+
 To configure SSH as requested, you’ll need to edit the SSH server configuration file (/etc/ssh/sshd_config). Follow these steps:
 1.	Open the SSH configuration file:
 sudo nano /etc/ssh/sshd_config
