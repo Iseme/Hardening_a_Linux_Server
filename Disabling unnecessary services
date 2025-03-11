@@ -1,0 +1,26 @@
+Having unnecessary services running increases your attack surface.
+ 1. List all services and output to service_list.txt
+     systemctl -t service >> service_list.txt
+
+2. Confirm services
+     grep -i "mysql" service_list.txt  
+     grep -i "samba" service_list.txt
+
+
+ 3. Execute services
+i.
+systemctl stop mysql.service
+systemctl disable mysql.service
+sudo apt-get remove --purge mysql-server mysql-client mysql-common
+
+
+ii.
+systemctl stop nmbd.service
+systemctl disable nmbd.service
+sudo apt remove nmbd.service
+
+iii.
+systemctl stop smbd.service
+systemctl disable smbd.service
+sudo apt remove smbd.service
+sudo apt remove samba
