@@ -1,0 +1,55 @@
+a. Remove all terminated users including their home directories and files:
+
+ls -l /home
+sudo userdel -r lestrade
+sudo userdel -r irene
+sudo userdel -r mary
+sudo userdel -r gregson
+
+
+Confirming terminated users, their home directories and files have been removed:
+
+ls -l /home
+id irene mary lestrade gregson
+
+
+b. Lock all user accounts of staff on temporary leave:
+
+sudo usermod -L moriarty
+sudo usermod -L mrs_hudson
+
+c. Unlock any users that are employed:
+Confirming status of the user accounts:
+sudo passwd -S sherlock
+sudo passwd -S watson
+sudo passwd -S mycroft
+sudo passwd -S toby
+sudo passwd -S adler
+
+Change user’s password to unlock them:
+
+usermod -p password toby
+usermod -p password adler
+
+sudo usermod -S toby
+sudo usermod -S adler
+
+d. Move employees from marketing department to new group research
+Confirming members of groups for the employees:
+tail -15 /etc/group
+
+Create new group research:
+sudo addgroup research
+
+Add user mycroft to research group and remove user from marketing group:
+sudo usermod -G marketing mycroft 
+sudo usermod -aG research mycroft
+
+sudo deluser mycroft marketing
+
+
+e. Remove marketing group
+
+sudo delgroup marketing
+
+
