@@ -1,0 +1,171 @@
+Build out 2 scripts to automate many of the tasks completed for hardening the Linux Server.
+
+Scripts created:
+
+
+Hardening_script1.sh
+
+#!/bin/bash
+
+# Variable for the report output file, choose an output file name
+REPORT_FILE="/Monthly_Report"
+
+# Output the hostname
+echo "Gathering hostname..."
+# Placeholder for command to get the hostname
+echo "Hostname: $(hostname)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+# Output the OS version
+echo "Gathering OS version..."
+# Placeholder for command to get the OS version
+echo "OS Version: $(cat /etc/os-release)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+# Output memory information
+echo "Gathering memory information..."
+# Placeholder for command to get memory info
+echo "Memory Information: $(free -h)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+# Output uptime information
+echo "Gathering uptime information..."
+# Placeholder for command to get uptime info
+echo "Uptime Information: $(uptime)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+# Backup the OS
+echo "Backing up the OS..."
+# Placeholder for command to back up the OS
+
+sudo tar -cvpzf /baker_street_backup.tar.gz --exclude=/baker_street_backup.tar.gz --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/sys --exclude=/dev --exclude=/run /
+
+echo "OS backup completed." >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+# Force Sherlock, Watson, and Mycroft to change their password upon their next login
+echo "Forcing Sherlock, Watson, and Mycroft users to change their password on next login..."
+# Placeholder for command to force password change
+
+chage -d 0 sherlock
+chage -d 0 watson
+chage -d 0 mycroft
+
+echo "Password change enforced for Sherlock, Watson, and Mycroft." >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+
+# Output the sudoers file to the report
+echo "Gathering sudoers file..."
+# Placeholder for command to output sudoers file
+echo "Sudoers file:$(cat /etc/sudoers)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+# Script to check for files with world permissions and update them
+echo "Checking for files with world permissions..."
+
+   find /home -perm /o+rwx -exec chmod o-rwx {} +
+
+# Placeholder for command to find and update files with world permissions
+echo "World permissions have been removed from any files found." >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+# Find specific files and update their permissions
+echo "Updating permissions for specific scripts..."
+
+# Engineering scripts - Only members of the engineering group
+echo "Updating permissions for Engineering scripts."
+
+
+# Placeholder for command to update permissions
+
+  find /home -type f -iname *"Engineering"*"sh" | xargs chown :engineering
+
+echo "Permissions updated for Engineering scripts." >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+# Research scripts - Only members of the research group
+echo "Updating permissions for Research scripts..."
+# Placeholder for command to update permissions
+
+   find /home -type f -iname *"Research"*"sh" | xargs chown :research
+
+echo "Permissions updated for Research scripts" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+# Finance scripts - Only members of the finance group
+echo "Updating permissions for Finance scripts"
+# Placeholder for command to update permissions
+
+  find /home -type f -iname *"Finance"*"sh" | xargs chown :finance
+
+echo "Permissions updated for Finance scripts." >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+echo "Script execution completed. Check $REPORT_FILE for details."
+
+
+
+
+Hardening_script2.sh
+
+#!/bin/bash
+
+# Variable for the report output file, choose a NEW output file name
+REPORT_FILE="/Weekly_Report"
+
+# Output the sshd configuration file
+echo "Gathering details from sshd configuration file"
+# Placeholder for command to get the sshd configuration file
+
+echo "sshd configuration file:$(cat /etc/ssh/sshd_config)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+# Update packages and services
+Echo “Updating packages and services”
+
+# Placeholder for command to update packages
+
+ apt update
+
+# Placeholder for command to upgrade packages
+
+sudo apt upgrade -y
+
+
+echo "Packages have been updated and upgraded" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+
+# Placeholder for command to list all installed packages
+
+echo "Installed Packages:$(apt list --installed)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+
+echo “Printing out logging configuration data”
+
+# Placeholder for command to display logging data
+
+echo "journald.conf file data: $(cat /etc/systemd/journald.conf)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+# Placeholder for command to display logrotate data
+
+echo "logrotate.conf file data:$(cat /etc/logrotate.conf)" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
+
+echo "Script execution completed. Check $REPORT_FILE for details."
+
+
+
+
+
