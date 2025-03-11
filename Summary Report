@@ -1,0 +1,34 @@
+In this project, we were tasked with hardening a Linux server for The Baker Street Corporation (BSC). The objective was to audit the server's configuration and implement security measures to mitigate potential vulnerabilities.
+
+Key Activities and Findings
+Pre-Hardening Steps:
+Conducted a system inventory and created a backup of critical files to ensure data integrity during the hardening process.
+
+Auditing Users and Groups:
+Reviewed existing user accounts and groups to ensure only authorized personnel had the system access.
+Implemented the principle of least privilege by adjusting user permissions as necessary.
+
+Password Policy Enforcement:
+Updated password policies to enforce complexity requirements and forced users to change weak passwords upon next login.
+Updated password hashing configuration.
+
+Sudo Permissions:
+Validated and updated the sudoers file to restrict sudo access to a minimal number of trusted users, ensuring that only essential tasks could be performed with elevated privileges.
+
+File and Directory Permissions:
+Checked and corrected permissions on sensitive files and directories, including /etc/shadow and /etc/passwd, to prevent unauthorized access.
+
+SSH Configuration:
+Configured SSH settings to enhance security, including disabling root login and changing the default SSH port.
+
+Unnecessary Services and Packages:
+Identified and removed unnecessary services and packages to reduce the attack surface of the server.
+
+Logging and Monitoring:
+Configured logging settings to ensure that all relevant events were recorded and could be monitored for suspicious activity.
+
+Automation of Hardening Tasks:
+Developed scripts to automate repetitive hardening tasks and scheduled them with cron jobs for regular execution.
+
+Conclusion
+The hardening process significantly improved the security posture of the Linux server. By implementing the changes outlined above, the server is now better protected against potential threats and vulnerabilities. Future recommendations include regular audits and updates to the hardening measures to adapt to evolving security challenges.
