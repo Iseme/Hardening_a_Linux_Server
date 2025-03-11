@@ -7,7 +7,9 @@ A Linux Server Hardening project for a fictional organization, The Baker Street 
 - [Auditing users and groups](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Auditing%20users%20and%20groups)
   
 - Updating and enforcing password policies
-- Updating and enforcing sudo permissions(https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Updating%20and%20enforcing%20sudo%20permissions)
+  
+- [Updating and enforcing sudo permissions](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Updating%20and%20enforcing%20sudo%20permissions)
+  
 - Validating and updating permissions on files and directories
 - Auditing and securing SSH
 - Reviewing and updating system packages
