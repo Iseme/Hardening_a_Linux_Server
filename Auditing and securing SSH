@@ -1,0 +1,38 @@
+SSH is a common method attackers use to breach remote linux servers, it is important to harden SSH with strict controls. 
+
+  1. Configure SSH to NOT allow the ability to 
+  a. No SSH with empty passwords
+  b. No SSH with root user
+  c. SSH with no other ports apart from 22
+  2. Enable SSH protocol 2
+  3. Edit the SSH Server Config File
+  4. Restart the SSH service to set your updates
+
+To configure SSH as requested, you’ll need to edit the SSH server configuration file (/etc/ssh/sshd_config). Follow these steps:
+1.	Open the SSH configuration file:
+sudo nano /etc/ssh/sshd_config
+
+2.	Disable SSH login with empty passwords: Find the line:
+#PermitEmptyPasswords yes
+
+Change it to:
+PermitEmptyPasswords no
+
+3.	Disable SSH login as the root user: Locate the line:
+#PermitRootLogin yes
+
+Change it to:
+PermitRootLogin no
+
+4.	Restrict SSH to port 22 only: Find the line:
+#Port 22
+
+Ensure it is uncommented and set to port 22:
+Port 22
+
+5.	Save and close the file.
+
+6.	Restart the SSH service for the changes to take effect:
+sudo systemctl restart sshd
+
+These steps will enforce the required settings: disallowing empty passwords, root login, and restricting access to only port 22.
