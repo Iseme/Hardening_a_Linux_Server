@@ -1,0 +1,7 @@
+Scheduling scripts with cron:
+
+Confirming scripts scheduled with cron:
+
+script 1 is scheduled to run once a month, and on the first of the month.
+
+script 2 is scheduled to run once a week, every Monday at 12 am.
