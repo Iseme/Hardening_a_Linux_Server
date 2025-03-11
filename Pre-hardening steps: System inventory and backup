@@ -1,0 +1,19 @@
+Collect and document the following information on the summary report.
+
+Customer: 
+The Baker Street Corporation 
+
+HostName
+# hostname
+
+OS Version
+# cat /etc/os-release
+
+Memopry information
+# free -h
+
+Uptime information
+# uptime
+
+Backup the OS
+sudo tar -cvpzf /baker_street_backup.tar.gz --exclude=/baker_street_backup.tar.gz --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/sys --exclude=/dev --exclude=/run /
