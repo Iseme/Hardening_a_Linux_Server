@@ -9,12 +9,21 @@ A Linux Server Hardening project for a fictional organization, The Baker Street 
 - [Updating and enforcing password policies](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Updating%20and%20enforcing%20password%20policies)
   
 - [Updating and enforcing sudo permissions](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Updating%20and%20enforcing%20sudo%20permissions)
+
+- [Updating password hashing configuration](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Updating%20password%20hashing%20configuration)
+
+- [Validating and updating permissions on files and directories](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Validating%20and%20updating%20permissions%20on%20files%20and%20directories)
   
-- Validating and updating permissions on files and directories
-- Auditing and securing SSH
-- Reviewing and updating system packages
-- Disabling unnecessary services
-- Enabling and configuring logging
-- Scripting your hardening tasks
-- Scheduling your hardening scripts
-- Report Summary
+- [Auditing and securing SSH](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Auditing%20and%20securing%20SSH)
+  
+- [Reviewing and updating system packages](
+  
+- [Disabling unnecessary services](
+  
+- [Enabling and configuring logging](
+  
+- [Scripting your hardening tasks](
+  
+- [Scheduling your hardening scripts](
+  
+- [Report Summary](
