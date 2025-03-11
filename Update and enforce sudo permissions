@@ -1,0 +1,16 @@
+Updating and enforcing sudo permissions
+1. Full sudo privileges to Sherlock only:
+Checking sudoers file:
+cat /etc/sudoers
+
+sudo visudo
+
+Leaving only Sherlock with full sudo privileges:
+sherlock ALL=(ALL) NOPASSWD:ALL
+
+2. Granting watson and Mycroft sudo privileges to run below script:
+watson ALL=(ALL) NOPASSWD: /var/log/logcleanup.sh
+mycroft ALL=(ALL) NOPASSWD: /var/log/logcleanup.sh
+
+3. Granting all employees in research group sudo privileges to run the below script:
+mycroft ALL=(ALL) NOPASSWD: /tmp/scripts/research_script.sh
