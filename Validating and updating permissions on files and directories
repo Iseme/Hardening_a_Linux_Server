@@ -1,0 +1,26 @@
+Validating and updating permissions on files and directories
+1. 
+find -perm /o+rwx -exec chmod o-rwx {} +
+
+2. 
+a. finds all script files and text files, that could be scripts and changes perms to only group can rwx
+find /home -type f -iname *"Engineering"*"sh" | xargs chmod 070
+
+Changing group ownership of the files to engineering
+find /home -type f -iname *"Engineering"*"sh" | xargs chown :engineering
+
+b. Finding files for research
+find /home -type f -iname *"Research"*"sh" | xargs chmod 070
+
+Changing group ownership:
+find /home -type f -iname *" Research"*"sh" | xargs chown :Research
+
+c. Finding files for finance
+find /home -type f -iname *"Finance"*"sh" | xargs chmod 070
+
+Changing ownership
+find /home -type f -iname *"Finance"*"sh" | xargs chown :finance
+
+3. Look for .txt files with passwords then delete them:
+Ran tree to look for the files then deleted them:
+
