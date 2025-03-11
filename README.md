@@ -28,9 +28,4 @@ A Linux Server Hardening project for a fictional organization, The Baker Street 
   
 - [Summary Report](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Summary%20Report)
 
-- [Project 1 Technical Brief](https://github.com/Iseme/Hardening_a_Linux_Server/raw/main/Project_1_Technical_Brief.pdf)
-
--## 📄 Project Report
-[📎 Download the Project Report (PDF)](https://github.com/username/repository/raw/main/document.pdf)
-
-[📎 Download the Technical Brief (PDF)]
+- [Project 1 Technical Brief][(https://github.com/Iseme/Hardening_a_Linux_Server/raw/main/Project_1_Technical_Brief.pdf)](https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Joseph%20Kuchio%20-%20Project%201%20Technical%20Brief.pdf)
