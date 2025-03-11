@@ -1,0 +1,8 @@
+Logging is a crucial part of the hardening process as logging can help identify security issues such as suspicious network activity, unauthorized access or other anomalous activity.
+
+cat /etc/systemd/journald.conf
+
+cat /etc/logrotate.conf
+
+Ran systemctl restart systemd-journald to restart the service
+
