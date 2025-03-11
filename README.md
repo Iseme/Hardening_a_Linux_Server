@@ -3,7 +3,8 @@ A Linux Server Hardening project for a fictional organization, The Baker Street 
 
 
 -[Pre-hardening steps: System inventory and backup]
-- Pre-hardening steps: System inventory and backup()
+- Pre-hardening steps: System inventory and backup(https://github.com/Iseme/Hardening_a_Linux_Server/blob/main/Pre-hardening%20steps%3A%20System%20inventory%20and%20backup)
+  
 - Auditing users and groups () 
 - Updating and enforcing password policies
 - Updating and enforcing sudo permissions
