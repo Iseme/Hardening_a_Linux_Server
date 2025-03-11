@@ -1,0 +1,35 @@
+Updating system packages is important because app developers often release patches to protect from security vulnerabilities.
+Having the latest version of your packages minimizes your security risks
+
+1.	Run apt update to update your package manager to make sure it has the latest version of all packages
+apt update
+
+2.	Next, run apt upgrade -y   to update all already installed packages to the latest versions
+sudo apt upgrade -y
+
+3.	Create a file that called package_list.txt, which contains all installed packages
+apt list --installed >>pakage_list.txt
+
+4.	Identify if any of the following packages are on the list as having these could introduce a security issue:
+a.	telnet
+b.	rsh-client
+apt list --installed | grep telnet && rsh-client
+
+5.	If they are on the list, remove those packages
+apt autoremove -y telnet
+apt autoremove -y inetutils-telnet
+
+no rsh-client package installed
+telnet and rsh-client are insecure because they use unencrypted communication as well as have weak authentication mechanisms. This makes them prone to man-in-the-middle attacks.
+
+
+6.	Remove all unnecessary dependencies of those packages with apt autoremove -y
+7.	Add the following packages:
+Install new packages
+apt install tripwire
+apt install ufw
+apt install lynis
+
+a.	ufw
+b.	lynis
+c.	tripwire
